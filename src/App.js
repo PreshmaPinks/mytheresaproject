@@ -1,6 +1,12 @@
 import React from "react";
+import Home from "./components/homePage";
+
 const App = () => {
-  return <div> This was made from scratch! Also Hello world!</div>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
 export default App;
