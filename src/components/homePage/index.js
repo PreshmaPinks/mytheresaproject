@@ -4,13 +4,11 @@ import Header from "../header";
 const Home = () => {
   return (
     <>
-      <Header />
-      <h4>trending</h4>
-      <div>image</div>
-      <h4>trending</h4>
-      <div>image</div>
-      <h4>trending</h4>
-      <div>image</div>
+      <div>
+        <div>trending</div>
+        <div>image</div>
+        <div>image</div>
+      </div>
     </>
   );
 };

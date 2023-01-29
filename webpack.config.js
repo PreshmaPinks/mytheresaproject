@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.js",
+    publicPath: "/",
   },
 
   target: "web",
@@ -15,6 +16,7 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts"],
@@ -25,6 +27,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
+      },
+      {
+        test: /\.(s(a|c)ss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
