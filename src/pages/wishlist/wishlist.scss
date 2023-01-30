@@ -1,5 +1,6 @@
 .wishlist_container {
   //   border: 2px solid grey;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   padding-left: 3.5rem;
@@ -12,7 +13,11 @@
   width: 16rem;
   padding: 0 1.5rem;
   overflow: hidden;
-  img {
-    width: 100%;
-  }
+}
+.wishlist_details {
+  border: 2px solid grey;
+  padding: 0 1.5rem;
+  background-color: white;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
 }

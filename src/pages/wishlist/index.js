@@ -18,6 +18,7 @@ const Wishlist = ({ wishList }) => {
                   // style={imageStyles}
                 />
               </div>
+              <div className="wishlist_details">{item.title}</div>
             </div>
           );
         })}

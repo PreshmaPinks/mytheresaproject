@@ -1,0 +1,59 @@
+@mixin details-container {
+  display: flex;
+}
+
+.details-container-popular {
+  @include details-container;
+  color: red;
+}
+
+.details-container-toprated {
+  @include details-container;
+  color: green;
+}
+
+.details-container-upcoming {
+  @include details-container;
+  color: blue;
+}
+
+.movie-image-container {
+  width: 50%;
+  margin: 2rem;
+  max-height: 40rem;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+
+.movie-detail-container {
+  width: 50%;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.movie-detail-sub-container {
+  margin: 0 10rem;
+}
+
+.wishlist-button {
+  font-size: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  border: 0px;
+  padding: 0.7rem 2.8rem;
+}
+.wishlist-button-container {
+  padding: 1rem 0;
+}
+
+.details-text-header {
+  padding: 1rem 0;
+}
+
+.details-text {
+  border-top: 1px solid grey;
+  padding: 1rem 0;
+}

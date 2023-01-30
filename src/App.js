@@ -7,7 +7,6 @@ import Header from "./components/header";
 
 const App = () => {
   const [wishList, addToWishList] = useState([]);
-  console.log(wishList, "wish");
   return (
     <>
       <Header />
@@ -15,8 +14,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/wishlist" element={<Wishlist wishList={wishList} />} />
         <Route
-          path="/details/:id"
-          element={<Details addToWishList={addToWishList} apple={3} />}
+          path="/details/:category/:id"
+          element={
+            <Details addToWishList={addToWishList} wishList={wishList} />
+          }
         />
       </Routes>
     </>
