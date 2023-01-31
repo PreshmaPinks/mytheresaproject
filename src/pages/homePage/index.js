@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "../../components/carousel";
 import "./index.scss";
-
-const APIKEY = "e840e4b6baae963fcdb9be3185131087";
+import { APIKEY } from "../../constants.js";
 
 const Home = () => {
   const [upcomingMovies, setUpcomingMovies] = useState(null);
@@ -45,19 +44,19 @@ const Home = () => {
   return (
     <>
       <div>
-        <div className="upcoming_carousel_container">
+        <div className="upcoming-carousel-container">
           <div className="movie-category-header"> Upcoming Movies </div>
           <div>
             <Carousel list={upcomingMovies} category="upcoming" />
           </div>
         </div>
-        <div className="popular_carousel_container">
+        <div className="popular-carousel-container">
           <div className="movie-category-header"> Popular Movies </div>
           <div>
             <Carousel list={popularMovies} category="popular" />
           </div>
         </div>
-        <div className="toprated_carousel_container">
+        <div className="toprated-carousel-container">
           <div className="movie-category-header"> Top rated Movies </div>
           <div>
             <Carousel list={topRatedMovies} category="toprated" />

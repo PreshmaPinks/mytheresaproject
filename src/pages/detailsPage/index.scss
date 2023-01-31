@@ -1,20 +1,39 @@
 @mixin details-container {
   display: flex;
+  font-family: "Open Sans", sans-serif;
 }
 
 .details-container-popular {
   @include details-container;
-  color: red;
 }
 
 .details-container-toprated {
   @include details-container;
-  color: green;
 }
 
 .details-container-upcoming {
   @include details-container;
-  color: blue;
+}
+
+@mixin movie-detail-name($color) {
+  font-size: 2rem;
+  color: $color;
+  font-weight: 600;
+}
+
+.movie-detail-name-upcoming {
+  @include movie-detail-name(#6117f1);
+  font-family: "Arvo", serif;
+}
+
+.movie-detail-name-toprated {
+  @include movie-detail-name(#438c7c);
+  font-family: "Itim", cursive;
+}
+
+.movie-detail-name-popular {
+  @include movie-detail-name(#8d141d);
+  font-family: "Itim", cursive;
 }
 
 .movie-image-container {

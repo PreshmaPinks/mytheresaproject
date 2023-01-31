@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-// import Home from "./components/homePage";
 import { Route, Routes } from "react-router-dom";
-// import Wishlist from "./components/wishlist";
-// import Details from "./components/detailsPage";
 import Header from "./components/header";
-
 import Home from "./pages/homePage";
 import Wishlist from "./pages/wishlist";
 import Details from "./pages/detailsPage";

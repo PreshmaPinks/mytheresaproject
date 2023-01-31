@@ -4,21 +4,20 @@ import "./wishlist.scss";
 const Wishlist = ({ wishList }) => {
   return (
     <>
-      <h1>Wishlist</h1>
-      <div className="wishlist_container">
+      <h1 className="wishlist-page-header">Wishlist</h1>
+      <div className="wishlist-container">
         {wishList?.map((item) => {
           return (
             <div>
-              <div className="wishlist_image">
+              <div>
                 <img
-                  // className="carousel_image"
+                  className="wishlist-image"
                   key={item.id}
                   src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
                   alt={item.title}
-                  // style={imageStyles}
                 />
               </div>
-              <div className="wishlist_details">{item.title}</div>
+              <div className="wishlist-details">{item.title}</div>
             </div>
           );
         })}

@@ -1,23 +1,25 @@
-.wishlist_container {
-  //   border: 2px solid grey;
+.wishlist-container {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 3.5rem;
-  padding-top: 3rem;
   background-color: #fae3d9;
+  padding: 3rem 0 0 3.5rem;
 }
 
-.wishlist_image {
+.wishlist-page-header {
+  padding-left: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wishlist-image {
   height: 25rem;
   width: 16rem;
   padding: 0 1.5rem;
-  overflow: hidden;
 }
-.wishlist_details {
-  border: 2px solid grey;
-  padding: 0 1.5rem;
+
+.wishlist-details {
+  padding: 0.5rem 1.5rem;
   background-color: white;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 1.5rem;
+  width: 13rem;
 }

@@ -1,29 +1,3 @@
-@mixin carousel_container($bgColor) {
-  background-color: $bgColor;
-  margin: 2rem;
-  padding: 2rem 1rem;
-  margin-bottom: 0.5rem;
-  overflow: hidden;
-  font-family: "Open Sans", sans-serif;
-}
-
-.upcoming_carousel_container {
-  @include carousel_container(#ffb6b9);
-}
-
-.popular_carousel_container {
-  @include carousel_container(#fae3d9);
-}
-
-.toprated_carousel_container {
-  @include carousel_container(#bbded6);
-}
-
-.movie-category-header {
-  padding: 0 0.4rem 1rem;
-  color: #5c5c5c;
-  font-size: 1.8rem;
-}
 @mixin carousel-button {
   position: absolute;
   top: 45%;
@@ -45,14 +19,14 @@
   right: 5;
 }
 
-.inner_container_style {
+.inner-container-style {
   display: flex;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.home_carousel_image {
+.home-carousel-image {
   width: 16rem;
   max-height: 22rem;
   margin: 0.5rem;

@@ -7,15 +7,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.upcoming_carousel_container {
+.upcoming-carousel-container {
   @include carousel_container(#ffb6b9);
 }
 
-.popular_carousel_container {
+.popular-carousel-container {
   @include carousel_container(#fae3d9);
 }
 
-.toprated_carousel_container {
+.toprated-carousel-container {
   @include carousel_container(#bbded6);
 }
 
@@ -23,37 +23,4 @@
   padding: 0 0.4rem 1rem;
   color: #5c5c5c;
   font-size: 1.8rem;
-}
-@mixin carousel-button {
-  position: absolute;
-  top: 45%;
-  z-index: 999;
-  background-color: #fff;
-  border: solid 1px #c0c0c0;
-  padding: 4px 10px;
-  border-radius: 3px;
-  opacity: 0.8;
-  font-size: 1.5rem;
-}
-
-.carousel-button-prev {
-  @include carousel-button;
-  left: 12;
-}
-.carousel-button-next {
-  @include carousel-button;
-  right: 5;
-}
-
-.inner_container_style {
-  display: flex;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.home_carousel_image {
-  width: 16rem;
-  max-height: 22rem;
-  margin: 0.5rem;
 }

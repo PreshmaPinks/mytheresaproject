@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./index.scss";
+import { APIKEY } from "../../constants.js";
 
-const APIKEY = "e840e4b6baae963fcdb9be3185131087";
 const Details = ({ addToWishList, wishList }) => {
   const params = useParams();
   const [movieDetails, setmovieDetails] = useState(null);
@@ -17,6 +17,7 @@ const Details = ({ addToWishList, wishList }) => {
         setmovieDetails(details);
       });
   }, []);
+
   return (
     <div className={`details-container-${params.category}`}>
       <div className="movie-image-container">
@@ -29,6 +30,9 @@ const Details = ({ addToWishList, wishList }) => {
 
       <div className="movie-detail-container">
         <div className="movie-detail-sub-container">
+          <div className={`movie-detail-name-${params.category}`}>
+            {movieDetails?.original_title}
+          </div>
           <div className="wishlist-button-container">
             <button
               onClick={() => addToWishList([...wishList, movieDetails])}

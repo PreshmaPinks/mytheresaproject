@@ -7,36 +7,42 @@ const Carousel = ({ list, category }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
-    setCurrentIndex(currentIndex - 7 < 0 ? list.length - 7 : currentIndex - 7);
+    setCurrentIndex(
+      currentIndex - CAROUSEL_IMAGES_COUNT < 0
+        ? list.length - CAROUSEL_IMAGES_COUNT
+        : currentIndex - CAROUSEL_IMAGES_COUNT
+    );
   };
 
   const handleNextClick = () => {
     setCurrentIndex(
-      currentIndex + 7 >= list.length
-        ? (currentIndex + 7) % list.length
-        : currentIndex + 7
+      currentIndex + CAROUSEL_IMAGES_COUNT >= list.length
+        ? (currentIndex + CAROUSEL_IMAGES_COUNT) % list.length
+        : currentIndex + CAROUSEL_IMAGES_COUNT
     );
   };
 
   return (
     <div>
-      <div className="inner_container_style">
+      <div className="inner-container-style">
         <button onClick={handlePrevClick} className={`carousel-button-prev`}>
           Prev
         </button>
-        {list?.slice(currentIndex, currentIndex + 7).map((item, index) => {
-          return (
-            <div key={item.id}>
-              <Link to={`/details/${category}/${item.id}`} relative="path">
-                <img
-                  className="home_carousel_image"
-                  src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
-                  alt="slide"
-                />
-              </Link>
-            </div>
-          );
-        })}
+        {list
+          ?.slice(currentIndex, currentIndex + CAROUSEL_IMAGES_COUNT)
+          .map((item, index) => {
+            return (
+              <div key={item.id}>
+                <Link to={`/details/${category}/${item.id}`} relative="path">
+                  <img
+                    className="home-carousel-image"
+                    src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
+                    alt="slide"
+                  />
+                </Link>
+              </div>
+            );
+          })}
         <button onClick={handleNextClick} className={`carousel-button-next`}>
           Next
         </button>
