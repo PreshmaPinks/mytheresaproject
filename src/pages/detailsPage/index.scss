@@ -1,3 +1,5 @@
+$detail-base-color1: #8d141d;
+
 @mixin details-container {
   display: flex;
   font-family: "Open Sans", sans-serif;
@@ -18,12 +20,12 @@
 @mixin movie-detail-name($color) {
   font-size: 2rem;
   color: $color;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .movie-detail-name-upcoming {
   @include movie-detail-name(#6117f1);
-  font-family: "Arvo", serif;
+  font-family: "Abril Fatface", cursive;
 }
 
 .movie-detail-name-toprated {
@@ -32,8 +34,8 @@
 }
 
 .movie-detail-name-popular {
-  @include movie-detail-name(#8d141d);
-  font-family: "Itim", cursive;
+  @include movie-detail-name($detail-base-color1);
+  font-family: "Aboreto", cursive;
 }
 
 .movie-image-container {
@@ -54,7 +56,7 @@
 }
 
 .movie-detail-sub-container {
-  margin: 0 10rem;
+  margin: 0 8rem;
 }
 
 .wishlist-button {
@@ -75,4 +77,8 @@
 .details-text {
   border-top: 1px solid #5a5a5a;
   padding: 1rem 0;
+}
+.coming-soon-text {
+  color: $detail-base-color1;
+  font-weight: 900;
 }

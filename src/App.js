@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Home from "./pages/homePage";
 import Wishlist from "./pages/wishlist";
 import Details from "./pages/detailsPage";
+import Error from "./pages/errorPage";
 
 const App = () => {
   const [wishList, addToWishList] = useState([]);
@@ -19,6 +20,7 @@ const App = () => {
             <Details addToWishList={addToWishList} wishList={wishList} />
           }
         />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );
