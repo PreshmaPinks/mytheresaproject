@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../header";
-import Carousel from "./carousel";
+import Carousel from "../../components/carousel";
 import "./index.scss";
 
 const APIKEY = "e840e4b6baae963fcdb9be3185131087";

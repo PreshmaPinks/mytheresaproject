@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
-import { CAROUSEL_IMAGES_COUNT } from "./../../constants.js";
+import { CAROUSEL_IMAGES_COUNT } from "../../constants.js";
 
 const Carousel = ({ list, category }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
