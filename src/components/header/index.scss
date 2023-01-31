@@ -1,3 +1,5 @@
+$text-color: #000000;
+
 .header-container {
   display: flex;
   font-family: "Open Sans", sans-serif;
@@ -14,14 +16,14 @@
     margin: 0 1rem;
     a {
       text-decoration: none;
-      color: black;
+      color: $text-color;
     }
   }
 }
 
 .header-title {
   width: 20%;
-  color: black;
+  color: $text-color;
   padding: 1.5rem 2rem;
   font-size: 2rem;
 }
