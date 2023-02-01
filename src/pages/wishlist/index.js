@@ -1,5 +1,5 @@
 import React from "react";
-import "./wishlist.scss";
+import "./index.scss";
 
 const Wishlist = ({ wishList }) => {
   return (
@@ -8,7 +8,7 @@ const Wishlist = ({ wishList }) => {
       <div className="wishlist-container">
         {wishList?.map((item) => {
           return (
-            <div>
+            <div key={item.id}>
               <div>
                 <img
                   className="wishlist-image"

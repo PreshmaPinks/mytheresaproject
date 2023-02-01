@@ -2,21 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./index.scss";
 import { APIKEY, POPULAR, UPCOMING } from "../../constants.js";
+import { fetchMovieData } from "./apis.js";
 
 const Details = ({ addToWishList, wishList }) => {
   const params = useParams();
   const [movieDetails, setmovieDetails] = useState(null);
-
+  const [error, setError] = useState(null);
   useEffect(() => {
-    const apiResponse = fetch(
-      `https://api.themoviedb.org/3/movie/${params.id}?api_key=${APIKEY}&language=en-US`
-    );
-    apiResponse
-      .then((res) => res.json())
-      .then((details) => {
-        setmovieDetails(details);
-      });
+    fetchMovieData(params.id, setmovieDetails, setError);
   }, []);
+
+  if (error) {
+    return <div className="error"> {error} </div>;
+  }
 
   return (
     <div className={`details-container-${params.category}`}>
@@ -43,7 +41,7 @@ const Details = ({ addToWishList, wishList }) => {
             </button>
           </div>
           {params?.category == POPULAR && (
-            <div>Rating - {movieDetails?.vote_average} ⭐</div>
+            <div>Rating - {movieDetails?.vote_average} ⭐ </div>
           )}
 
           {params?.category == UPCOMING && (

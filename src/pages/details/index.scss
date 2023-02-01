@@ -66,8 +66,20 @@ $detail-base-color1: #8d141d;
   border: 0px;
   padding: 0.7rem 2.8rem;
 }
+
 .wishlist-button-container {
   padding: 1rem 0;
+}
+
+.coming-soon-text {
+  color: $detail-base-color1;
+  font-weight: 900;
+}
+
+.error {
+  padding: 1rem 0 0 2rem;
+  color: #cc4242;
+  font-size: 1.5rem;
 }
 
 .details-text-header {
@@ -77,8 +89,4 @@ $detail-base-color1: #8d141d;
 .details-text {
   border-top: 1px solid #5a5a5a;
   padding: 1rem 0;
-}
-.coming-soon-text {
-  color: $detail-base-color1;
-  font-weight: 900;
 }

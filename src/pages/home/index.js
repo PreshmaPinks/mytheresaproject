@@ -2,48 +2,30 @@ import React, { useState, useEffect } from "react";
 import Carousel from "../../components/carousel";
 import "./index.scss";
 import { APIKEY } from "../../constants.js";
+import { fetchMoviesData } from "./apis.js";
 
 const Home = () => {
   const [upcomingMovies, setUpcomingMovies] = useState(null);
   const [popularMovies, setPopularMovies] = useState(null);
   const [topRatedMovies, setTopRatedMovies] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const apiResponse = fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIKEY}&language=en-US`
-    );
-    apiResponse
-      .then((res) => res.json())
-      .then((list) => {
-        setUpcomingMovies(list?.results);
-      });
+    fetchMoviesData("upcoming", setUpcomingMovies, setError);
   }, []);
 
   useEffect(() => {
-    const apiResponse = fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${APIKEY}&language=en-US`
-    );
-    apiResponse
-      .then((res) => res.json())
-      .then((list) => {
-        setPopularMovies(list?.results);
-      });
+    fetchMoviesData("popular", setPopularMovies, setError);
   }, []);
 
   useEffect(() => {
-    const apiResponse = fetch(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIKEY}&language=en-US`
-    );
-    apiResponse
-      .then((res) => res.json())
-      .then((list) => {
-        setTopRatedMovies(list?.results);
-      });
+    fetchMoviesData("top_rated", setTopRatedMovies, setError);
   }, []);
 
   return (
     <>
       <div>
+        {error && <div className="error"> {error} </div>}
         <div className="upcoming-carousel-container">
           <div className="movie-category-header"> Upcoming Movies </div>
           <div>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/header";
-import Home from "./pages/homePage";
+import Home from "./pages/home";
 import Wishlist from "./pages/wishlist";
-import Details from "./pages/detailsPage";
-import Error from "./pages/errorPage";
+import Details from "./pages/details";
+import Error from "./pages/error";
 
 const App = () => {
   const [wishList, addToWishList] = useState([]);
