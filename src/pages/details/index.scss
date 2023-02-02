@@ -1,4 +1,6 @@
 $detail-base-color1: #8d141d;
+$upcoming-section-color: #ffb6b9;
+$toprated-section-color: #438c7c;
 
 @mixin details-container {
   display: flex;
@@ -15,27 +17,6 @@ $detail-base-color1: #8d141d;
 
 .details-container-upcoming {
   @include details-container;
-}
-
-@mixin movie-detail-name($color) {
-  font-size: 2rem;
-  color: $color;
-  font-weight: 500;
-}
-
-.movie-detail-name-upcoming {
-  @include movie-detail-name(#6117f1);
-  font-family: "Abril Fatface", cursive;
-}
-
-.movie-detail-name-toprated {
-  @include movie-detail-name(#438c7c);
-  font-family: "Itim", cursive;
-}
-
-.movie-detail-name-popular {
-  @include movie-detail-name($detail-base-color1);
-  font-family: "Aboreto", cursive;
 }
 
 .movie-image-container {
@@ -59,16 +40,51 @@ $detail-base-color1: #8d141d;
   margin: 0 8rem;
 }
 
-.wishlist-button {
-  font-size: 1rem;
-  border-radius: 0;
-  cursor: pointer;
-  border: 0px;
-  padding: 0.7rem 2.8rem;
+@mixin movie-detail-name($color) {
+  font-size: 2rem;
+  color: $color;
+  font-weight: 500;
+}
+
+.movie-detail-name-upcoming {
+  @include movie-detail-name($upcoming-section-color);
+  font-family: "Abril Fatface", cursive;
+}
+
+.movie-detail-name-popular {
+  @include movie-detail-name($detail-base-color1);
+  font-family: "Aboreto", cursive;
+}
+
+.movie-detail-name-toprated {
+  @include movie-detail-name($toprated-section-color);
+  font-family: "Itim", cursive;
 }
 
 .wishlist-button-container {
   padding: 1rem 0;
+}
+
+@mixin wishlist-button($bgcolor, $radius) {
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0px;
+  padding: 0.7rem 2.8rem;
+  background-color: $bgcolor;
+  color: #ffffff;
+  border-radius: $radius;
+}
+
+.wishlist-button-upcoming {
+  @include wishlist-button($upcoming-section-color, 1.125rem);
+}
+
+.wishlist-button-popular {
+  @include wishlist-button(#b2d9ea, 0.5rem);
+}
+
+.wishlist-button-toprated {
+  @include wishlist-button($toprated-section-color, 0rem);
 }
 
 .coming-soon-text {

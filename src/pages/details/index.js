@@ -35,7 +35,7 @@ const Details = ({ addToWishList, wishList }) => {
           <div className="wishlist-button-container">
             <button
               onClick={() => addToWishList([...wishList, movieDetails])}
-              className="wishlist-button"
+              className={`wishlist-button-${params.category}`}
             >
               ADD TO WISHLIST
             </button>

@@ -1,3 +1,10 @@
+.inner-container-style {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 @mixin carousel-button {
   position: absolute;
   top: 45%;
@@ -14,20 +21,14 @@
   @include carousel-button;
   left: 12;
 }
-.carousel-button-next {
-  @include carousel-button;
-  right: 5;
-}
-
-.inner-container-style {
-  display: flex;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
 
 .home-carousel-image {
   width: 16rem;
   max-height: 22rem;
   margin: 0.5rem;
+}
+
+.carousel-button-next {
+  @include carousel-button;
+  right: 5;
 }
